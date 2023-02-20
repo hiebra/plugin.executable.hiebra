@@ -51,7 +51,7 @@ jobs:
       - name: Upload docs
         uses: actions/upload-artifact@v2
         with:
-          name: flix-docs-html
+          name: docs-html
           path: docs/build/html
 
   release:
