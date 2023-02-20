@@ -1,0 +1,56 @@
+# Kodi Media Center language file
+# Addon Name: Family album
+# Addon id: family-album.github.io
+# Addon Provider: Santiago Ruiz
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-05 11:37+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Settings
+msgctxt "#80001"
+msgid "General"
+msgstr ""
+
+msgctxt "#80002"
+msgid "Data"
+msgstr ""
+
+msgctxt "#80009"
+msgid "Pictures source"
+msgstr ""
+
+msgctxt "#80010"
+msgid "The parent or another common ancestor of the folders containing the photos, videos or presentations conforming the body of the album. Using a Kodi pictures source is recommended, specially in this case because common menu/presentation has sense, for the album to be extensible (also by yourself). You have a working media folder provided to be used only as example that can be included directly in this field at: https://ten-foot.github.io/family-album/media"
+msgstr ""
+
+msgctxt "#80011"
+msgid "Pictures source selector"
+msgstr ""
+
+msgctxt "#80012"
+msgid "Behaviour"
+msgstr ""
+
+msgctxt "#80013"
+msgid "Launch the application on start"
+msgstr ""
+
+msgctxt "#80014"
+msgid "If enabled, the Family album app will be started just after Kodi starts"
+msgstr ""
+
+msgctxt "#80015"
+msgid "Navigate root singleton folders automatically"
+msgstr ""
+
+msgctxt "#80016"
+msgid "Hard to explain. Give me time..."
+msgstr ""
