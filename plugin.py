@@ -1,45 +1,50 @@
-from framework import *
+import xbmcgui
+import xbmcplugin
+import web_pdb; web_pdb.set_trace()
+import plugin
+from urllib.parse import parse_qsl, urlencode
 
-def indexable(name):
+#<addon>
+import xbmcaddon
+addon = xbmcaddon.Addon()
+def configure():
+    id = addon.getAddonInfo('id')
+    xbmc.executebuiltin(f'Addon.OpenSettings({id})')
+def resource(path):
+    resources = addon.getAddonInfo('path') + 'resources/' + path
+#</addon>
 
-def breadcrumb(path):
-    if not setting('show breadcrumb'):
-        return
-    nodes = path.split('/')
-    i = 0
-    for node in nodes:
-        if (i++ == 0) and not setting('include trunk in breadcrumb'):
-            continue
-        breadcrum += indexable(node)
+def item():
+    raise Exception('not implemented yet')
 
-def branch(mode, parent = None):
-    path = global path(root, parent)
-    branches, leafs = contents(path)
-    breadcrumb(parent)
-    items = []
-    for name in branches:
-        branch = global branch(mode, parent = path)
-        if item:
-            items.append(item)
-    lateBinding = getSetting('lateBinding')
-    for name in files:
-        item = buildFile(name, absolutePath, lateBinding)
-        if item:
-            items.append(item)
-    if len(items) == 1 and item['isSubdirectory'] and getSetting('autoroot') == 'true':
-        cut = len(label) + 3
-        buildDirectory(contentType if not menu else 'menu', itemRelativePath, itemBreadcrum[:-cut], menu)
-    else:
-        render(items, lateBinding)
+def branch(label, path = None, art = None):
+    item = xbmcgui.ListItem(label)
+    xbmcplugin.addDirectoryItem(handle, f'{base}?action={action}' if action else join(root, path), item, True)
+    plugin.append(item)
 
+call = {
+    'configure': configure,
+}
 
-def album():
-    if leaf := parameter('leaf'):
-        resolve(root, *parameters('trunk', 'branch'), leaf)
-    else:
-        if mode := parameter('mode')
-            branch(mode, parent = parameter('parent'))
-        else:
-            branch(None)
+def leaf(label, path = None, action = None):
+    item = xbmcgui.ListItem(label)
+    item.setInfo('IsPlayable', 'false' if action else 'true')
+    xbmcplugin.addDirectoryItem(handle, f'{base}?action={action}' if action else join(root, path), item, False)
+    plugin.append(item)
 
-album() if root else require()
+leaf('Complete configuration...', action = 'configure')
+videos()
+
+"""
+item.setArt({
+    'icon': resources + 'icon.png',
+    'thumb': resources + 'thumb.jpeg',
+    'fanart': resources + 'fanart.jpg'
+})
+item.setInfo('video', {'plot': 'La aplicación no puede ejecutarse hasta que se haya configurado correctamente. Complete la configuración y vuelva a intentarlo'})
+"""
+
+xbmcplugin.setContent(handle, 'videos')
+
+xbmcplugin.addSortMethod(handle, xbmcplugin.SORT_METHOD_LABEL_IGNORE_FOLDERS)
+xbmcplugin.endOfDirectory(handle, cacheToDisc=False)
