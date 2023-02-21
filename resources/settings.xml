@@ -19,11 +19,6 @@
 				</setting>
 			</group>
 			<group id="2" label="80012">
-                <setting id="autostart" type="boolean" label="80013" help="80014">
-	                <level>0</level>
-	                <default>false</default>
-	                <control type="toggle"/>
-                </setting>
                 <setting id="autoroot" type="boolean" label="80015" help="80016">
 	                <level>0</level>
 	                <default>true</default>

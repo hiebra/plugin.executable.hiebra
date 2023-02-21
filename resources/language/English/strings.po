@@ -28,7 +28,7 @@ msgid "Pictures source"
 msgstr ""
 
 msgctxt "#80010"
-msgid "The parent or another common ancestor of the folders containing the photos, videos or presentations conforming the body of the album. Using a Kodi pictures source is recommended, specially in this case because common menu/presentation has sense, for the album to be extensible (also by yourself). You have a working media folder provided to be used only as example that can be included directly in this field at: https://ten-foot.github.io/family-album/media"
+msgid "The parent of the all the folders containing the photos and videos. Direct descendants should correspond to independent album volumes. Using a Kodi pictures source is recommended for the album to be extensible (also by yourself)"
 msgstr ""
 
 msgctxt "#80011"
@@ -39,18 +39,10 @@ msgctxt "#80012"
 msgid "Behaviour"
 msgstr ""
 
-msgctxt "#80013"
-msgid "Launch the application on start"
-msgstr ""
-
-msgctxt "#80014"
-msgid "If enabled, the Family album app will be started just after Kodi starts"
-msgstr ""
-
 msgctxt "#80015"
 msgid "Navigate root singleton folders automatically"
 msgstr ""
 
 msgctxt "#80016"
-msgid "Hard to explain. Give me time..."
+msgid "Folders that are the unique descendants of its parent are automatically navigated (only thir children will be shown) when this option is enabled"
 msgstr ""
