@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.executable.hiebra" version="0.0.7" name="Álbum familiar" provider-name="Santiago Ruiz">
+<addon id="plugin.executable.hiebra" version="0.1.0" name="Álbum familiar" provider-name="Santiago Ruiz">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.web-pdb" version="1.5.6"/>
-        <import addon="script.module.hiebra" version="0.0.2"/>
+        <import addon="script.module.hiebra" version="0.1.0"/>
     </requires>
     <extension point="xbmc.python.pluginsource" library="plugin.py">
         <provides>image</provides>
